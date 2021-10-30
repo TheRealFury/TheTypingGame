@@ -20,7 +20,7 @@ function draw() {
       start.position(1000,1000);
     }));
   }
-  if(30 > time > 0){
+  if(30 > time && time > 0){
     if(typed == 1){
       charVal = random(letters);
       typed = 0;
@@ -36,7 +36,8 @@ function draw() {
       time -= 1;
     }
   }
-  else if(time == 0){
+  if(time == 0){
+    console.log('a');
     textSize(80);
     text('Your score was - ' + score,50,window.height/2);
   }
